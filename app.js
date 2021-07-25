@@ -57,31 +57,6 @@ console.log(ahmed)
 
 
 
-// function dataCollection(){
-//     var userName = document.getElementById('name').value;
-//     var userAddress = document.getElementById('address').value;
-//     var userMale = document.getElementById('male').value;
-//     var userFemale = document.getElementById('female').value;
-//     var userProfession = document.getElementById('profession').value;
-//     var userEducation = document.getElementById('education').value;
-
-//     alert(userName + userAddress + userMale + userProfession + userEducation)
-
-
-    
-
-// }
-
-// function UserData(userName, userAddress, userMale, userFemale, userProfession, userEducation) {
-//     this.name = userName
-//     this.address = userAddress,
-//     this.genderm = userMale,
-//     this.genderf = userFemale,
-//     this.profession= userProfession,
-//     this.education = userEducation
-// }
-
-
 function dataCollection(){
     var userName = document.getElementById('name').value;
     var userAddress = document.getElementById('address').value;
