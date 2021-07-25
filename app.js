@@ -36,7 +36,7 @@ console.log("lastName" in person)
 //Q.3
 
 function UserRecord (name, email, age, gender) {
-    this.name = name,
+    this.userName = name,
     this.email = email,
     this.age = age,
     this.gender = gender
@@ -52,25 +52,55 @@ console.log(ali)
 console.log(ahmed)
 
 // Q.4
-var userName = document.getElementById('name').value;
-var address = document.getElementById('address').value;
-var gender = document.getElementById('gender').value;
-var profession = document.getElementById('profession').value;
-var education = document.getElementById('education').value;
+
+
+
+
+
+// function dataCollection(){
+//     var userName = document.getElementById('name').value;
+//     var userAddress = document.getElementById('address').value;
+//     var userMale = document.getElementById('male').value;
+//     var userFemale = document.getElementById('female').value;
+//     var userProfession = document.getElementById('profession').value;
+//     var userEducation = document.getElementById('education').value;
+
+//     alert(userName + userAddress + userMale + userProfession + userEducation)
+
+
+    
+
+// }
+
+// function UserData(userName, userAddress, userMale, userFemale, userProfession, userEducation) {
+//     this.name = userName
+//     this.address = userAddress,
+//     this.genderm = userMale,
+//     this.genderf = userFemale,
+//     this.profession= userProfession,
+//     this.education = userEducation
+// }
+
 
 function dataCollection(){
-    document.write(userName);
+    var userName = document.getElementById('name').value;
+    var userAddress = document.getElementById('address').value;
+    var userMale = document.getElementById('male').value;
+    var userFemale = document.getElementById('female').value;
+    var userProfession = document.getElementById('profession').value;
+    var userEducation = document.getElementById('education').value;
+
+    function UserData(){
+        this.name = userName,
+        this.address = userAddress,
+        this.male = userMale,
+        this.female = userFemale,
+        this.profession = userProfession,
+        this.education = userEducation
+
+    }
+
+   var userDataCollection = new UserData(userName, userAddress, userMale, userFemale, userProfession, userEducation)
+   console.log(userDataCollection);
 }
 
-// function UserData (name, address, gender,  profession, education) {
-//     this.name = name
-//     this.gender = gender,
-//     this.address = address,
-//     this.education = education,
-//     this.profession= profession
-// }
-
-// function dataCollection() {
-// var userOne = new UserData(userName, address, gender, profession, education)
-// document.write(userOne)
-// }
