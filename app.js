@@ -53,13 +53,24 @@ console.log(ahmed)
 
 // Q.4
 var userName = document.getElementById('name').value;
+var address = document.getElementById('address').value;
+var gender = document.getElementById('gender').value;
+var profession = document.getElementById('profession').value;
+var education = document.getElementById('education').value;
 
-function UserData (name, gender, address, education, profession) {
-    this.name = name
-    this.gender = gender,
-    this.address = address,
-    this.education = education,
-    this.profession= profession
+function dataCollection(){
+    document.write(userName);
 }
 
-var userOne = new UserData(userName)
+// function UserData (name, address, gender,  profession, education) {
+//     this.name = name
+//     this.gender = gender,
+//     this.address = address,
+//     this.education = education,
+//     this.profession= profession
+// }
+
+// function dataCollection() {
+// var userOne = new UserData(userName, address, gender, profession, education)
+// document.write(userOne)
+// }
