@@ -7,7 +7,7 @@ console.log(itemsArray.map((v)=>{
     console.log(v.price*v.quantity)
     return v.price*v.quantity
 }
-).reduce((a,b)=>a-b,0));
+).reduce((a,b)=>a+b,0));
 
 //Q.2
 
@@ -75,11 +75,12 @@ if(female.checked){
         this.education = userEducation
 
     }
-
+    
    var  userDataCollection = new UserData(userName, userAddress, userGender,  userProfession, userEducation)
-//    localStorage.setItem('userData',userDataCollection);
-//    console.log(localStorage.getItem('userData'));
-   console.log(userDataCollection);
+
+    console.log(userDataCollection);
+
+
 }
 
 
