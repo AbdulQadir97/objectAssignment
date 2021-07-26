@@ -3,16 +3,11 @@ var itemsArray = [
 {name:"cookie",price:30, quantity:9},
 {name:"shirt",price:880, quantity:1},
 {name:"pen",price:100, quantity:2}];
-var firstItem  = itemsArray[0].price * itemsArray[0].quantity;
-var secondItem = itemsArray[1].price * itemsArray[1].quantity;
-var thirdItem  = itemsArray[2].price * itemsArray[2].quantity;
-var fourthItem = itemsArray[3].price * itemsArray[3].quantity;
-var totalPrice = firstItem + secondItem + thirdItem + fourthItem;
-console.log(firstItem)
-console.log(secondItem)
-console.log(thirdItem)
-console.log(fourthItem)
-console.log(totalPrice)
+console.log(itemsArray.map((v)=>{
+    console.log(v.price*v.quantity)
+    return v.price*v.quantity
+}
+).reduce((a,b)=>a-b,0));
 
 //Q.2
 
@@ -58,24 +53,33 @@ console.log(ahmed)
 
 
 function dataCollection(){
-    var userName = document.getElementById('name').value;
-    var userAddress = document.getElementById('address').value;
-    var userMale = document.getElementById('male').value;
-    var userFemale = document.getElementById('female').value;
+var userName = document.getElementById('name').value;
+var userAddress = document.getElementById('address').value;
+var male = document.getElementById('male');
+var female =document.getElementById("female");
+var userGender = null;
+if(male.checked){
+    userGender = male.value;
+}
+if(female.checked){
+    userGender = female.value;
+}
     var userProfession = document.getElementById('profession').value;
     var userEducation = document.getElementById('education').value;
 
     function UserData(){
         this.name = userName,
         this.address = userAddress,
-        this.male = userMale,
-        this.female = userFemale,
+        this.gender = userGender,
         this.profession = userProfession,
         this.education = userEducation
 
     }
 
-   var userDataCollection = new UserData(userName, userAddress, userMale, userFemale, userProfession, userEducation)
+   var  userDataCollection = new UserData(userName, userAddress, userGender,  userProfession, userEducation)
+//    localStorage.setItem('userData',userDataCollection);
+//    console.log(localStorage.getItem('userData'));
    console.log(userDataCollection);
 }
+
 
